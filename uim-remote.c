@@ -112,6 +112,15 @@ prop_list_get()
     {
         regfree( &regexBuffer );
         //            puts("No match!!\n");
+
+        if (currentMode == 0)
+        {
+            if( strstr(p, "ひらがな") )
+            { currentMode = 2; }
+            else
+            { currentMode = 1; }
+        }
+
         return;
     }
 
